@@ -12,8 +12,8 @@ WALL_AREA = (1, HEIGHT - 2), (1, WIDTH - 2)
 FOOD_AREA = (1, HEIGHT - 2), (1, WIDTH - 2)
 
 
-SNAKE_HEAD = '▓▓'
-SNAKE_BODY = '██'
+SNAKE_HEAD = '@'
+SNAKE_BODY = '*'
 FOOD = '$'
 WALL = 'X'
 EMPTY = ' '
@@ -30,7 +30,7 @@ food = (
     random.randint(FOOD_AREA[0][0], FOOD_AREA[0][1]),
     random.randint(FOOD_AREA[1][0], FOOD_AREA[1][1]),
 )
-# tạo tường
+
 def create_wall():
     global walls
 
@@ -47,7 +47,7 @@ def create_wall():
 
 walls = []
 create_wall()
-# vẽ 
+
 def draw_screen():
     global screen
 
